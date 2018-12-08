@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/01 20:37:39 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/01 21:26:33 by ikourkji         ###   ########.fr       */
+/*   Updated: 2018/12/07 22:07:47 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,21 @@
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	size_t	len1;
-	size_t	len2;
-	size_t	n;
-	int		res;
+	const unsigned char	*s1c;
+	const unsigned char	*s2c;
 
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	n = len1 < len2 ? len1 : len2;
-	res = ft_strncmp(s1, s2, n);
-	if (res == 0 && len1 != len2)
-		res = (unsigned char)s1[n] - (unsigned char)s2[n];
-	return (res);
+	s1c = (const unsigned char *)s1;
+	s2c = (const unsigned char *)s2;
+	while (*s1c && *s2c)
+	{
+		if (*s1c != *s2c)
+			return ((int)*s1c - *s2c);
+		s1c++;
+		s2c++;
+	}
+	if (*s1c)
+		return ((int)*s1c);
+	if (*s2c)
+		return ((int)*s2c * -1);
+	return (0);
 }

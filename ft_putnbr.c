@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/27 21:41:04 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/07 20:15:33 by ikourkji         ###   ########.fr       */
+/*   Updated: 2018/12/07 22:20:21 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,19 @@
 
 void	ft_putnbr(int n)
 {
-	if (n == -2147483648)
-	{
-		ft_putchar('-');
-		ft_putchar('2');
-		ft_putnbr(147483648);
-		return ;
-	}
+	int negflag;
+
+	negflag = 1;
 	if (n < 0)
 	{
 		ft_putchar('-');
-		n *= -1;
+		negflag = -1;
 	}
-	if (n >= 0 && n <= 9)
-		ft_putchar('0' + n);
+	if (n >= -9 && n <= 9)
+		ft_putchar('0' + n * negflag);
 	else
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr((n / 10) * negflag);
+		ft_putnbr((n % 10) * negflag);
 	}
 }

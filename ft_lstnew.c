@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/07 12:07:50 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/07 18:53:41 by ikourkji         ###   ########.fr       */
+/*   Updated: 2018/12/07 22:12:15 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	else
 	{
 		if (!(ret->content = malloc(content_size)))
+		{
+			free(ret);
 			return (NULL);
+		}
 		ft_memcpy(ret->content, content, content_size);
 		ret->content_size = content_size;
 	}
