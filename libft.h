@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:35:46 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/11 18:47:12 by ikourkji         ###   ########.fr       */
+/*   Updated: 2018/12/11 19:35:33 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
+int					ft_charat(const char *s, char c);
 
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
