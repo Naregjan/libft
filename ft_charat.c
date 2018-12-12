@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 19:32:29 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/11 19:35:39 by ikourkji         ###   ########.fr       */
+/*   Updated: 2018/12/11 19:40:02 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ int		ft_charat(const char *s, char c)
 	{
 		if (s[i] == c)
 			return (i);
+		i++;
 	}
+	if (c == '\0')
+		return (i);
 	return (-1);
 }
