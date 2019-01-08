@@ -16,6 +16,8 @@ int		ft_charat(const char *s, char c)
 {
 	int i;
 
+	if (!s)
+		return (-1);
 	i = 0;
 	while (s[i])
 	{
