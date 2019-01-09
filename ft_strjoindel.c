@@ -6,13 +6,13 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 18:41:23 by ikourkji          #+#    #+#             */
-/*   Updated: 2018/12/11 18:46:08 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/01/08 19:37:51 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strjoindel(char const *s1, char const *s2)
+char	*ft_strjoindel(char *s1, char const *s2)
 {
 	char *ret;
 
