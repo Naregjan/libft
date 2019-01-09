@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:35:46 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/01/08 19:38:14 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/01/08 20:09:21 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strsubdel(char *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoindel(char *s1, char const *s2);
 char				*ft_strtrim(char const *s);

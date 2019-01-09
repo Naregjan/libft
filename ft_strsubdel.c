@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strsubdel.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/12/05 02:20:44 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/01/08 20:53:04 by ikourkji         ###   ########.fr       */
+/*   Created: 2019/01/08 20:03:39 by ikourkji          #+#    #+#             */
+/*   Updated: 2019/01/08 20:05:11 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+char	*ft_strsubdel(char *s, unsigned int start, size_t len)
 {
-	int negflag;
+	char *ret;
 
-	negflag = 1;
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		negflag = -1;
-	}
-	if (n >= -9 && n <= 9)
-		ft_putchar_fd('0' + n * negflag, fd);
-	else
-	{
-		ft_putnbr_fd((n / 10) * negflag, fd);
-		ft_putnbr_fd((n % 10) * negflag, fd);
-	}
+	if (!s)
+		return (NULL);
+	ret = ft_strnew(len);
+	if (!ret)
+		return (NULL);
+	ret = ft_strncpy(ret, s + start, len);
+	ft_strdel((char **)&s);
+	return (ret);
 }
