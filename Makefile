@@ -6,7 +6,7 @@
 #    By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/30 20:28:37 by ikourkji          #+#    #+#              #
-#    Updated: 2018/11/30 21:28:47 by ikourkji         ###   ########.fr        #
+#    Updated: 2019/01/10 18:00:10 by ikourkji         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,9 +14,9 @@ LF = libft
 
 NAME = $(LF).a
 
-SRC = ft_*.c $(LF).h
+SRC = ft_*.c
 
-CMP = ft_*.o $(LF).h.gch
+CMP = ft_*.o
 
 all: $(NAME)
 
