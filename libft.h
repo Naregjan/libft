@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:35:46 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/01/12 21:06:06 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/01/15 05:38:51 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+
+# define MIN(x, y) ( (x) < (y) ? (x) : (y) )
+# define MAX(x, y) ( (x) > (y) ? (x) : (y) )
 
 # define IFRET(x, y) if (x) return (y)
 # define ELIFRET(x, y) else if (x) return (y)
