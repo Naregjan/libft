@@ -6,15 +6,11 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/27 00:12:56 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/01/29 00:30:34 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/01/29 00:32:41 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-/*
-** ret and ptr will both be null if memalloc fails
-*/
 
 void	*ft_rememalloc(void *ptr, size_t old_size, size_t new_size)
 {
