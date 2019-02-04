@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:35:46 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/02/03 21:21:03 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/02/03 22:04:39 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,9 +54,6 @@ int					ft_iswhite(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
 int					ft_isnan(long double f);
-int					ft_isposinf(long double f);
-int					ft_isneginf(long double f);
-int					ft_isinf(long double f);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_charat(const char *s, char c);
