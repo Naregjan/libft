@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isinf.c                                         :+:      :+:    :+:   */
+/*   ft_isneginf.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/03 21:08:10 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/02/03 21:18:32 by ikourkji         ###   ########.fr       */
+/*   Created: 2019/02/03 21:19:48 by ikourkji          #+#    #+#             */
+/*   Updated: 2019/02/03 21:20:30 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isinf(long double f)
+int	ft_isneginf(long double f)
 {
-	return (ft_isposinf(f) || ft_isneginf(f));
+	return (f == -1.0 / 0.0);
 }
