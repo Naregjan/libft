@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_swapend32.c                                     :+:      :+:    :+:   */
+/*   ft_findintab.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/11 02:21:02 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/03/11 02:54:27 by ikourkji         ###   ########.fr       */
+/*   Created: 2019/03/11 02:51:34 by ikourkji          #+#    #+#             */
+/*   Updated: 2019/03/11 02:56:49 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** swaps endianness for 32-bit vals
+** returns index of string in NULL-terminated array of strings
+** -1 if none
 */
 
-uint32_t	ft_swapend32(uint32_t n)
+int		ft_findintab(char **haystack, char *needle)
 {
-	uint32_t b0;
-	uint32_t b1;
-	uint32_t b2;
-	uint32_t b3;
+	int i;
 
-	b0 = (n & 0x000000ff) << 24u;
-	b1 = (n & 0x0000ff00) << 8u;
-	b2 = (n & 0x00ff0000) >> 8u;
-	b3 = (n & 0xff000000) >> 24u;
-	return (b0 | b1 | b2 | b3);
+	i = 0;
+	while (tab[i])
+	{
+		if (ft_strcmp(tab[i], needle) == 0)
+			return (i);
+		i++;
+	}
+	return (-1);
 }
