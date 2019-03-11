@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/26 16:35:46 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/03/11 02:57:20 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/03/11 03:18:23 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,7 @@ void				ft_putnbr_fd(int n, int fd);
 
 uint32_t			ft_swapend32(uint32_t n);
 int					ft_findintab(char **haystack, char *needle);
+int					ft_findintabn(char **haystack, char *needle, size_t len);
 
 typedef struct		s_list
 {
