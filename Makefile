@@ -6,18 +6,20 @@
 #    By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/30 20:28:37 by ikourkji          #+#    #+#              #
-#    Updated: 2019/03/24 23:46:06 by ikourkji         ###   ########.fr        #
+#    Updated: 2019/03/25 02:41:57 by ikourkji         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= libft.a
+GNL		= get_next_line
+PF		= ft_printf
 
-INC		= -I ./inc
+INC		= -I ./inc -I ./$(GNL)/inc
 
 _SRC	= bits/ft_*.c is/ft_*.c lst/ft_*.c mem/ft_*.c put/ft_*.c str/ft_*.c
-SRC		= $(patsubst %,src/%,$(_SRC))
+SRC		= $(patsubst %,src/%,$(_SRC)) $(GNL)/src/get_next_line.c
 
-_OBJ	= ft_*.o
+_OBJ	= ft_*.o get_next_line.o
 OBJ		= $(patsubst %,obj/%,$(_OBJ))
 
 RED		= \033[0;31m
