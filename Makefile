@@ -6,29 +6,42 @@
 #    By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/30 20:28:37 by ikourkji          #+#    #+#              #
-#    Updated: 2019/01/10 18:00:10 by ikourkji         ###   ########.fr        #
+#    Updated: 2019/03/24 23:46:06 by ikourkji         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-LF = libft
+NAME	= libft.a
 
-NAME = $(LF).a
+INC		= -I ./inc
 
-SRC = ft_*.c
+_SRC	= bits/ft_*.c is/ft_*.c lst/ft_*.c mem/ft_*.c put/ft_*.c str/ft_*.c
+SRC		= $(patsubst %,src/%,$(_SRC))
 
-CMP = ft_*.o
+_OBJ	= ft_*.o
+OBJ		= $(patsubst %,obj/%,$(_OBJ))
+
+RED		= \033[0;31m
+GREEN	= \033[0;32m
+NC		= \033[0m
 
 all: $(NAME)
 
 $(NAME):
-	gcc -Wall -Wextra -Werror -c $(SRC)
-	ar rc $(NAME) $(CMP)
-	ranlib $(NAME)
+	@echo "compiling libft..."
+	@gcc -Wall -Wextra -Werror $(INC) -c $(SRC)
+	@mv $(_OBJ) obj
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
+	@echo "$(GREEN)complete!$(NC)"
 
 clean:
-	rm -f $(CMP)
+	@rm -f $(OBJ)
+	@echo "$(RED)removed .o files$(NC)"
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
+	@echo "$(RED)removed $(NAME)$(NC)"
 
 re: fclean all
+
+.PHONY: all $(NAME) clean fclean re
