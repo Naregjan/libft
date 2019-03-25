@@ -6,7 +6,7 @@
 #    By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/30 20:28:37 by ikourkji          #+#    #+#              #
-#    Updated: 2019/03/25 02:41:57 by ikourkji         ###   ########.fr        #
+#    Updated: 2019/03/25 02:49:06 by ikourkji         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,13 +31,14 @@ all: $(NAME)
 $(NAME):
 	@echo "compiling libft..."
 	@gcc -Wall -Wextra -Werror $(INC) -c $(SRC)
+	@mkdir obj
 	@mv $(_OBJ) obj
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 	@echo "$(GREEN)complete!$(NC)"
 
 clean:
-	@rm -f $(OBJ)
+	@rm -rf obj
 	@echo "$(RED)removed .o files$(NC)"
 
 fclean: clean
