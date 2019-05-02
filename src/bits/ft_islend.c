@@ -6,7 +6,7 @@
 /*   By: ikourkji <ikourkji@student.42.us.or>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/02 05:30:18 by ikourkji          #+#    #+#             */
-/*   Updated: 2019/05/02 05:33:21 by ikourkji         ###   ########.fr       */
+/*   Updated: 2019/05/02 05:35:37 by ikourkji         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ int	ft_islend(void)
 
 	word = 0x0001;
 	b = (char*)&word;
-	return(b[0] ? 1 : 0);
+	return (b[0] ? 1 : 0);
 }
