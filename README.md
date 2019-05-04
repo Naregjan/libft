@@ -1,5 +1,5 @@
 # libft
-42 libft; recreation of libc functions plus some extras for 42 Silicon Valley.
+libft == lib forty-two; recreation of libc functions plus some extras for [42 Silicon Valley](https://www.42.us.org/).
 
 Horribly inefficient, lovingly made.
 
